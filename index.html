@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jigsaw Puzzle</title>
+    <link href="image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.js"></script>
+    <script src="puzzle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="collage">
+        <h2 id="header">Image Puzzle</h2>
+        <div id="playPanel">
+            <h3 id="imgTitle"></h3>
+            <hr/>
+                <ul id="sortable" class="sortable"></ul>
+
+                <div id="gameOver">
+                    <div>
+                        <h2>Congratulations! <br /> You solved the image.</h2>
+                        Turns: <span class="stepCount">0</span>
+                        <br /> <br/>
+                        <button id="newPhoto" type="button" onclick="newPhoto()">Play more</button>
+                        <button id="Home" type="button"><a href="js/jquery-ui.js">Home</a></button>
+
+                    </div>
+                </div>
+
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Turns:</div>
+                        <div class="stepCount">0</div>
+                    </div>
+                    <img id="actualImage" />
+                    <div>See the picture and solve the puzzle.</div>
+
+                </div>
+            
+            
+        </div>
+    </div>
+</body>
+
+</html>

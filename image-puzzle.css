@@ -1,0 +1,114 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+button:hover{
+    cursor:pointer;
+}
+body{
+    font-family: "Jaro", serif;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    background-color: white;
+    background-size:100%;
+}
+#collage hr{
+    margin: 0%;
+    border:none;
+    border-top:2px solid #000000;
+    height:1px;
+}
+
+#collage #imgTitle{
+    font-size: 25px;
+    margin: 8px 0px;
+}
+
+#collage #header{
+    text-align: center;
+    width: 100%;
+    background: #DB5030;
+    padding: 15px 10px;
+    margin: 0%;
+    font-size: 48px;
+    text-shadow: rgb(244, 210, 210) 2px 2px 1px;
+
+}
+
+#playPanel {
+    display:grid;
+    background-color:#c2defc;
+    padding:10px 15px;
+    margin: 10px auto;
+    max-width:800px;
+    width:100%;
+}
+
+#collage #actualImageBox {
+    display: inline-block;
+    font-size:0.8em;
+    margin: 10px 10px;
+    vertical-align: top;
+    width:280px;
+}
+
+#collage #stepBox, #collage #timeBox {
+    display:inline-block;
+    width:48%;
+}
+
+#collage #stepBox div {
+    background-color:#c2defc;
+    display:inline-block;
+    padding:1px 4px;
+    margin: 0px auto;
+    max-width:800px;
+}
+
+#collage img#actualImage{
+    border:2px solid #a46;
+    height:280px;
+    width:280px;
+    padding: auto;
+}
+
+#collage #sortable {
+    border:2px solid #a46;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    width: 400px;
+}
+
+#collage #sortable li {
+    background-size: 400% 400%;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100px;
+    height: 100px;
+    }
+
+#collage button  {
+    background-color:#f5f2f2;
+    border:1px solid #cce;
+    display: inline;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    padding: 3px 8px;
+}
+#gameOver{
+    float: right;
+    margin: 10px;
+    width: 280px;
+    background-color: #b4ea82;
+    padding: 5px 10px 20px 10px;
+    text-align: center;
+    border: 5px solid #333;
+    border-radius: 15px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
