@@ -3,11 +3,11 @@
 
 
 var images = [
-    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-4.jpg?resize=1200%2C795&ssl=1', title: 'Tigers Nest Temple, Bhutan' },
-    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-13.jpg?resize=1200%2C795&ssl=1', title: 'Ha Long Bay, Vietnam' },
-    { src: 'https://images.deccanherald.com/deccanherald/import/sites/dh/files/article_images/2019/08/25/file75rv4fyxuqwdm8pubbt-1566734692.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true', title: 'Taj Mahal in Agra' },
-    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-u_qNneKSRN6Uz5k8Blm7v3blFR0g2QJEw&s', title: 'Great Wall of China, China' },
-    { src: 'https://media-cdn.tripadvisor.com/media/photo-s/0b/69/c8/2c/view-from-front.jpg', title: 'Kohila mill' },
+    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-4.jpg?resize=1200%2C795&ssl=1', title: 'Image 1' },
+    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-13.jpg?resize=1200%2C795&ssl=1', title: 'Image 2' },
+    { src: 'https://images.deccanherald.com/deccanherald/import/sites/dh/files/article_images/2019/08/25/file75rv4fyxuqwdm8pubbt-1566734692.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true', title: 'Image 3' },
+    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-u_qNneKSRN6Uz5k8Blm7v3blFR0g2QJEw&s', title: 'Image 4' },
+    { src: 'https://media-cdn.tripadvisor.com/media/photo-s/0b/69/c8/2c/view-from-front.jpg', title: 'Image 5' },
 ];
 
 var gridSize = 3;
