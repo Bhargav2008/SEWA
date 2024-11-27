@@ -36,12 +36,16 @@ body{
 }
 
 #playPanel {
-    display:grid;
     background-color:#c2defc;
     padding:10px 15px;
     margin: 10px auto;
     max-width:800px;
     width:100%;
+}
+
+#mainArea{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 #collage #actualImageBox {
@@ -102,7 +106,8 @@ body{
     padding: 3px 8px;
 }
 #gameOver{
-    float: right;
+    float:right;
+    display: none;
     margin: 10px;
     width: 280px;
     background-color: #b4ea82;

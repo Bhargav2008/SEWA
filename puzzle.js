@@ -31,7 +31,6 @@ function newPhoto() {
 
 $(function () {
     imagePuzzle.startGame(images, gridSize);
-    $('#actualImageBox').hide();
 });
 
 
