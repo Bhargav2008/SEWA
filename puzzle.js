@@ -3,15 +3,20 @@
 
 
 var images = [
-    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-4.jpg?resize=1200%2C795&ssl=1', title: 'Image 1' },
-    { src: 'https://i0.wp.com/indianvagabond.com/wp-content/uploads/2018/08/baolis-of-delhi-13.jpg?resize=1200%2C795&ssl=1', title: 'Image 2' },
-    { src: 'https://images.deccanherald.com/deccanherald/import/sites/dh/files/article_images/2019/08/25/file75rv4fyxuqwdm8pubbt-1566734692.jpg?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true', title: 'Image 3' },
-    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7-u_qNneKSRN6Uz5k8Blm7v3blFR0g2QJEw&s', title: 'Image 4' },
-    { src: 'https://media-cdn.tripadvisor.com/media/photo-s/0b/69/c8/2c/view-from-front.jpg', title: 'Image 5' },
+    { src: 'img/RajaonkiBaoli.jpg', title: 'Rajon ki Baoli, Mehrauli Archaeological Park of Delhi' },
+    { src: 'img/nizamuddin.jpg', title: 'Hazrat Nizamuddin Baoli' },
+    { src: 'img/firoz.jpg', title: 'Feroz Shah Kotla Baoli' },
+    { src: 'img/agrasen.jpg', title: 'Agrasen Ki Baoli' },
+    { src: 'img/gandak.jpg', title: 'Gandhak Ki Baoli' },
+    { src: 'img/puranaquila.jpg', title: 'Purana Qila Baoli' },
+    { src: 'img/tuglaqbad.jpg', title: 'Tughlakabad Baoli' },
+    { src: 'img/dwarka.jpg', title: 'Loharehri Baoli, Sector 12, Dwarka' },
+
 ];
 
 var gridSize = 3;
 var turn = 0;
+var isGameOver = false;
 
 
 function newPhoto() {
@@ -20,6 +25,7 @@ function newPhoto() {
         gridSize++;
     }
     stepCount = 0;
+    isGameOver = false;
     $('.stepCount').text(stepCount);
     imagePuzzle.startGame(images, gridSize);
     $('#actualImageBox').show();
@@ -45,6 +51,8 @@ var imagePuzzle = {
     },
 
     enableSwapping: function (elem) {
+        if (isGameOver) return;
+
         $(elem).draggable({
             snap: '#droppable',
             snapMode: 'outer',
@@ -53,6 +61,7 @@ var imagePuzzle = {
         });
         $(elem).droppable({
             drop: function (event, ui) {
+                if (isGameOver) return;
                 var $dragElem = $(ui.draggable).clone().replaceAll(this);
                 $(this).replaceAll(ui.draggable);
 
@@ -60,6 +69,10 @@ var imagePuzzle = {
                 if (isSorted(currentList)) {
                     $('#actualImageBox').hide();
                     $('#gameOver').show().html();
+                    isGameOver = true;
+                    if (images.length == 0) {
+                        $('#newPhoto').hide();
+                    }
                 }
                 else {
                     imagePuzzle.stepCount++;
@@ -76,6 +89,7 @@ var imagePuzzle = {
         var percentage = 100 / (gridSize - 1);
         var imageIndex = Math.floor(Math.random() * images.length);
         var image = images[imageIndex];
+        var size = $('#sortable').width()
 
         $('#imgTitle').html(image.title);
         $('#actualImage').attr('src', image.src);
@@ -88,8 +102,8 @@ var imagePuzzle = {
                 'background-image': 'url(' + image.src + ')',
                 'background-size': (gridSize * 100) + '%',
                 'background-position': xpos + ' ' + ypos,
-                'width': 400 / gridSize,
-                'height': 400 / gridSize
+                'width': size / gridSize,
+                'height': size / gridSize
             });
             $('#sortable').append(li);
         }

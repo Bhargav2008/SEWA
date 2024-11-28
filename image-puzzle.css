@@ -1,83 +1,105 @@
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
     text-decoration: none;
     color: inherit;
 }
-button:hover{
-    cursor:pointer;
+
+
+button:hover {
+    cursor: pointer;
 }
-body{
+
+body {
+    width: 100%;
     font-family: "Jaro", serif;
     margin: 0px 0px;
     padding: 0px 0px;
     background-color: white;
-    background-size:100%;
-}
-#collage hr{
-    margin: 0%;
-    border:none;
-    border-top:2px solid #000000;
-    height:1px;
+
 }
 
-#collage #imgTitle{
+#collage hr {
+    margin: 0%;
+    border: none;
+    border-top: 2px solid #000000;
+    height: 1px;
+}
+
+#collage #imgTitle {
     font-size: 25px;
     margin: 8px 0px;
 }
 
-#collage #header{
+#collage #header {
     text-align: center;
     width: 100%;
+    display:block;
     background: #DB5030;
     padding: 15px 10px;
     margin: 0%;
+    position: static;
     font-size: 48px;
     text-shadow: rgb(244, 210, 210) 2px 2px 1px;
 
 }
 
-#playPanel {
-    background-color:#c2defc;
-    padding:10px 15px;
-    margin: 10px auto;
-    max-width:800px;
-    width:100%;
+#collage{
+    position: relative;
+    width: 100%;
+    margin: 0 0;
+    overflow: hidden;
+    
 }
 
-#mainArea{
-    display:grid;
+#playPanel {
+    background-color: #c2defc;
+    padding: 10px 15px;
+    margin: 10px auto;
+    max-width: 764px;
+    width: 93%;
+    position: relative;
+}
+
+#mainArea {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 100%;
 }
 
 #collage #actualImageBox {
     display: inline-block;
-    font-size:0.8em;
+    font-size: 0.8em;
     margin: 10px 10px;
     vertical-align: top;
-    width:280px;
+    width: 280px;
 }
 
-#collage #stepBox, #collage #timeBox {
-    display:inline-block;
-    width:48%;
+#collage #stepBox,
+#collage #timeBox {
+    display: inline-block;
+    width: 48%;
 }
 
 #collage #stepBox div {
-    background-color:#c2defc;
-    display:inline-block;
-    padding:1px 4px;
+    background-color: #c2defc;
+    display: inline-block;
+    padding: 1px 4px;
     margin: 0px auto;
-    max-width:800px;
+    max-width: 800px;
 }
 
-#collage img#actualImage{
-    border:2px solid #a46;
-    height:280px;
-    width:280px;
+#collage img#actualImage {
+    border: 3px solid #000000;
+    height: 280px;
+    width: 280px;
     padding: auto;
 }
 
 #collage #sortable {
-    border:2px solid #a46;
+    border: 3px solid #000000;
     list-style-type: none;
     display: inline-block;
     margin: 10px;
@@ -94,26 +116,111 @@ body{
     float: left;
     width: 100px;
     height: 100px;
-    }
+}
 
-#collage button  {
-    background-color:#f5f2f2;
-    border:1px solid #cce;
+#collage button {
+    font-family: "Jaro", serif;
+    background-color: #c2defc;
+    border: 1px solid #000000;
     display: inline;
-    font-size: 14px;
     height: auto;
     width: auto;
     padding: 3px 8px;
+    margin: 5px;
+
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
 }
-#gameOver{
-    float:right;
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+#gameOver {
+    float: right;
     display: none;
     margin: 10px;
     width: 280px;
-    background-color: #b4ea82;
+    height: fit-content;
+    background-color: #DB5030;
     padding: 5px 10px 20px 10px;
     text-align: center;
-    border: 5px solid #333;
-    border-radius: 15px;
+    border: 5px solid #000000;
+    border-radius: 2px;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 764px) {
+
+    #mainArea {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto; 
+        justify-items: center; 
+    }
+
+    #sortable, 
+    #actualImageBox, 
+    #gameOver {
+        margin: auto; 
+
+
+    }
+    #sortable{
+        width: 220px !important;
+    }
+    #sortable li{
+        width: 50px;
+        height: 50px;
+    }
+    #actualImageBox{
+        width: 180px !important;
+    }
+    img#actualImage{
+        width: 180px !important;
+        height: 180px !important;
+    }
+    #mainArea{
+        padding: auto;
+        margin: auto;
+    }
+
+    #gameOver {
+        float: none; 
+        margin: 0 10px; 
+    }
 }
