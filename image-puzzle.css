@@ -16,7 +16,7 @@ body {
     font-family: "Jaro", serif;
     margin: 0px 0px;
     padding: 0px 0px;
-    background-color: white;
+    background-color: #f5f7fa;
 
 }
 
@@ -32,12 +32,12 @@ body {
     margin: 8px 0px;
 }
 
-#collage #header {
+#header {
     text-align: center;
-    width: 100%;
-    display:block;
+    width: auto;
+    display: block;
     background: #DB5030;
-    padding: 15px 10px;
+    padding: 17px 10px;
     margin: 0%;
     position: static;
     font-size: 48px;
@@ -45,12 +45,12 @@ body {
 
 }
 
-#collage{
+#collage {
     position: relative;
     width: 100%;
     margin: 0 0;
     overflow: hidden;
-    
+
 }
 
 #playPanel {
@@ -189,38 +189,122 @@ body {
 
     #mainArea {
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto; 
-        justify-items: center; 
+        grid-template-rows: auto auto;
+        justify-items: center;
     }
 
-    #sortable, 
-    #actualImageBox, 
+    #sortable,
+    #actualImageBox,
     #gameOver {
-        margin: auto; 
+        margin: auto;
 
 
     }
-    #sortable{
-        width: 220px !important;
+
+    #sortable {
+        width: 280px !important;
     }
-    #sortable li{
+
+    #sortable li {
         width: 50px;
         height: 50px;
     }
-    #actualImageBox{
+
+    #actualImageBox {
         width: 180px !important;
     }
-    img#actualImage{
+
+    img#actualImage {
         width: 180px !important;
         height: 180px !important;
     }
-    #mainArea{
+
+    #mainArea {
         padding: auto;
         margin: auto;
     }
 
     #gameOver {
-        float: none; 
-        margin: 0 10px; 
+        float: none;
+        margin: 0 10px;
     }
+}
+
+/* home page css */
+#home {
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+    cursor: pointer;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-header p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.card-body {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-body p {
+    margin: 5px 0;
+}
+
+.card-image img {
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.link {
+    text-decoration: none;
+}
+
+header {
+    width: auto;
+    background-color: #DB5030;
+    padding: 5px 1.2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
 }

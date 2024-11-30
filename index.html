@@ -1,52 +1,54 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jigsaw Puzzle</title>
-    <link href="image-puzzle.css" rel="stylesheet" />
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/jquery.ui.touch-punch.js"></script>
-    <script src="puzzle.js"></script>
+    <title>SEWA 2024</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="image-puzzle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="collage">
-        <h2 id="header">Image Puzzle</h2>
-        <div id="playPanel">
-            <h3 id="imgTitle"></h3>
-            <hr/>
-            <div id="mainArea">
-                <ul id="sortable" class="sortable"></ul>
-
-                <div id="gameOver">
-                    <div>
-                        <h2>Congratulations! <br /> You solved the image.</h2>
-                        Turns: <span class="stepCount">0</span>
-                        <br /> <br/>
-                        <button id="newPhoto" type="button" onclick="newPhoto()">Play more</button>
-                        <button id="Home" type="button"><a href="">Home</a></button>
+    <header>
+        <h1 style="padding:0px 10px;color: white;">SEWA 2024</h1>
+        <a class="link" href=""><img src="https://img.icons8.com/m_sharp/512/FFFFFF/home.png" width="40px"></a>
+    </header>
+    <br>
+    <br>
+    <h1 style="text-align: center; padding: 10px 66px;">A Banyan House Creation</h1>
+    <div id="home">
+        <div class="container">
+            <a href="puzzle.html" class="link">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/puzzle-card.webp" alt="Xingqiu">
+                    </div>
+                    <div class="card-header">
+                        <h2>Image Puzzle</h2>
 
                     </div>
-                </div>
-
-                <div id="actualImageBox">
-                    <div id="stepBox">
-                        <div>Turns:</div>
-                        <div class="stepCount">0</div>
+                    <div class="card-body">
+                        <p>Identify the Baolis of Delhi and solve puzzles.</p>
                     </div>
-                    <img id="actualImage" />
-                    <div>See the picture and solve the puzzle.</div>
-
                 </div>
-            </div>
-            
+            </a>
+            <a href="quiz.html" class="link">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="img/quiz-card.jpg" alt="Xingqiu">
+                    </div>
+                    <div class="card-header">
+                        <h2>Trivia Quiz</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Test your knowledge of the Stepwells of Delhi.</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </body>

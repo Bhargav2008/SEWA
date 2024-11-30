@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle</title>
+    <link rel="icon" href="img/logo.png">
+    <link href="image-puzzle.css" rel="stylesheet" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.js"></script>
+    <script src="puzzle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <!-- made by Bhargav -->
+</head>
+
+<body>
+    <div id="collage">
+        <a class="link" href="index.html" style="float: right;margin: 0px 25px; margin-top: 30px;"><img src="https://img.icons8.com/m_sharp/512/FFFFFF/home.png" width="40px"></a>
+
+        <h2 id="header">Image Puzzle</h2>
+        <div id="playPanel">
+            <h3 id="imgTitle"></h3>
+            <hr />
+            <div id="mainArea">
+                <ul id="sortable" class="sortable"></ul>
+
+                <div id="gameOver">
+                    <div>
+                        <h2>Congratulations! <br /> You solved the image.</h2>
+                        Turns: <span class="stepCount">0</span>
+                        <br /> <br />
+                        <button id="newPhoto" type="button" onclick="newPhoto()">Play more</button>
+                        <button id="Home" type="button"><a href="index.html">Home</a></button>
+
+                    </div>
+                </div>
+
+                <div id="actualImageBox">
+                    <div id="stepBox">
+                        <div>Turns:</div>
+                        <div class="stepCount">0</div>
+                    </div>
+                    <img id="actualImage" />
+                    <div>See the picture and solve the puzzle.</div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
